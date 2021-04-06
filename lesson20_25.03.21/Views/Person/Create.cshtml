@@ -1,0 +1,28 @@
+﻿@model lesson20_25._03._21.Models.Person
+@{
+    ViewData["Title"] = "Создание Person";
+}
+
+<h1>Создание Person</h1>
+
+<form asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-2">Фамилия</div>
+        <div class="col-md-5">
+            <input required autocomplete="off" asp-for="LastName" class="form-control" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Имя</div>
+        <div class="col-md-5">
+            <input required autocomplete="off" asp-for="FirstName" class="form-control" type="text" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Отчество</div>
+        <div class="col-md-5">
+            <input autocomplete="off" asp-for="MiddleName" class="form-control" type="text" />
+        </div>
+    </div>
+    <input class="btn btn-success" type="submit" value="Create" style="float: left; margin-right: 22px;" />
+</form>
